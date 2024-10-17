@@ -1,38 +1,76 @@
 /* Header Styling */
 .header {
-  position: fixed; /* Keep the navbar fixed at the top */
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: #000;
   z-index: 100;
   display: flex;
-  justify-content: space-between; /* Space between the name and the navbar */
+  justify-content: space-between; /* Ensure space between name and navbar */
   align-items: center;
-  padding: 20px 50px; /* Adjust the padding for balance */
+  padding: 20px 50px;
 }
 
 .header h1 {
   color: #00ffff;
   font-size: 24px;
-  margin-left: 290px; /* Reduced left margin to zero */
+  margin-left: 0; /* No margin to the left */
 }
 
 .header nav {
   display: flex;
-  gap: 20px; /* Adjust gap between the links */
-  margin-right: 20px; /* Add a slight margin to the right */
+  gap: 20px;
+  margin-right: 20px;
 }
 
 .header nav a {
   color: #fff;
-  font-size: 16px; /* Keep font size smaller */
+  font-size: 16px;
   text-transform: uppercase;
   transition: color 0.3s;
-  padding: 10px 15px; /* Padding around the links */
+  padding: 10px 15px;
 }
 
 .header nav a:hover {
   color: #00ffff;
-  background-color: rgba(0, 0, 0, 0.3); /* Add hover effect */
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack the name and navbar vertically */
+    padding: 15px;
+  }
+
+  .header h1 {
+    font-size: 20px; /* Reduce name font size */
+    margin-bottom: 10px; /* Add margin between name and nav */
+  }
+
+  .header nav a {
+    font-size: 14px; /* Reduce font size for nav links */
+    padding: 8px 10px; /* Reduce padding for links */
+  }
+}
+
+/* Responsive Design for even smaller screens like mobile */
+@media (max-width: 480px) {
+  .header {
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .header nav {
+    flex-direction: column; /* Stack nav links vertically */
+    gap: 10px;
+  }
+
+  .header nav a {
+    font-size: 12px; /* Further reduce nav font size */
+  }
 }
