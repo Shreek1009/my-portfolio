@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Projects.css';
 
 const Projects = () => {
   return (
@@ -10,16 +11,15 @@ const Projects = () => {
           <p>Developed an interactive web portal for Shri Basaveshwara Temple.</p>
           <p><strong>Technologies:</strong> Next.js, Tailwind CSS, Firebase, Express.js</p>
         </div>
-
         <div className="project-card">
           <h3>Blog Management System</h3>
           <p>Created a system for content creation and publication management.</p>
           <p><strong>Technologies:</strong> PHP, HTML, CSS, MySQL</p>
         </div>
-        {/* Add more projects as needed */}
       </div>
     </section>
   );
 };
 
 export default Projects;
+

@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import About from './components/About';
-import Skills from './components/Skills';  // Importing Skills
-import Projects from './components/Projects';  // Import Projects
-import Contact from './components/Contact';  // Importing Contact
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -17,10 +17,10 @@ function App() {
             <>
               <About />
               <Skills />
-              <Projects /> {/* Add Projects to the main page */}
+              <Projects />
             </>
           } />
-          <Route path="/contact" element={<Contact />} /> {/* Contact Page */}
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>

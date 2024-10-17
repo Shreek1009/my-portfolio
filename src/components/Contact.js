@@ -1,8 +1,9 @@
 import React from 'react';
+import '../styles/Contact.css';
 
 const Contact = () => {
   return (
-    <div>
+    <section className="contact-section">
       <h2>Contact Me</h2>
       <form>
         <input type="text" placeholder="Your Name" required />
@@ -10,7 +11,7 @@ const Contact = () => {
         <textarea placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
-    </div>
+    </section>
   );
 };
 
