@@ -1,65 +1,57 @@
-/* Header Styling */
 .header {
-  position: fixed;
+  position: fixed; 
   top: 0;
   width: 100%;
   background-color: #000;
   z-index: 100;
   display: flex;
-  justify-content: space-between; /* Align items evenly */
+  justify-content: flex-end; 
   align-items: center;
-  padding: 15px 20px; /* Adjust padding for better spacing */
-  box-sizing: border-box;
+  padding: 10px 20px; /* Reduce padding to fit mobile screens */
 }
 
 .header h1 {
   color: #00ffff;
-  font-size: 20px; /* Adjust for mobile */
-  margin-left: 20px;
-  flex-grow: 1; /* Let the name occupy space */
+  font-size: 1.8rem; /* Adjust font-size for mobile */
+  margin-left: 20px; /* Keep space from left side */
 }
 
 .header nav {
   display: flex;
-  gap: 10px; /* Adjust gap between links */
+  gap: 10px; /* Adjust gap between the links */
 }
 
 .header nav a {
   color: #fff;
-  font-size: 14px; /* Reduce font size for mobile */
+  font-size: 14px; /* Adjust font size for mobile */
   text-transform: uppercase;
   transition: color 0.3s;
-  padding: 8px 10px;
+  padding: 5px 10px;
 }
 
 .header nav a:hover {
   color: #00ffff;
-  background-color: rgba(0, 0, 0, 0.3); /* Add subtle hover effect */
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
 
-/* Media Query for smaller screens */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
     padding: 10px;
+    justify-content: center; /* Center navbar in mobile view */
   }
-
+  
   .header h1 {
-    font-size: 18px;
+    font-size: 1.5rem;
     margin-left: 0;
-    margin-bottom: 10px; /* Add spacing between name and nav */
   }
-
+  
   .header nav {
-    flex-direction: column; /* Stack links vertically on small screens */
-    align-items: center;
-    width: 100%; /* Make links occupy full width */
+    flex-direction: column; /* Stack links in mobile */
+    gap: 5px;
   }
-
+  
   .header nav a {
-    padding: 10px;
-    width: 100%; /* Make links take full width */
-    text-align: center;
+    font-size: 12px;
   }
 }

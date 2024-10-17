@@ -6,31 +6,24 @@
   max-width: 1200px;
   margin: 0 auto;
   min-height: 100vh;
-  gap: 50px; /* Adds space between text and image */
+  gap: 50px;
 }
 
 .about-text {
-  max-width: 600px; /* Adjust text container width */
-  text-align: left;
+  max-width: 600px;
 }
 
-/* Styling for the Hello! I am Shreekara B text */
-.greeting-text {
+.about-text h1 {
   font-size: 3rem;
   font-weight: bold;
-  color: #fff;  /* White color for the main greeting */
+  color: #fff;
   margin-bottom: 10px;
 }
 
-.name-highlight {
-  color: #fff;  /* Keep the name white */
-}
-
-/* Typing effect style */
-.effect-highlight {
-  font-size: 2.5rem;  /* Slightly smaller size for the typing effect */
+.about-text h2 {
+  font-size: 2.2rem;
   font-weight: bold;
-  color: #00ffff;  /* Blue color for the effect text */
+  color: #00ffff;
   margin-bottom: 20px;
 }
 
@@ -45,12 +38,12 @@
   width: 300px;
   border-radius: 15px;
   object-fit: cover;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Add a shadow */
-  transition: transform 0.3s; /* Optional animation effect */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
 }
 
 .about-image img:hover {
-  transform: scale(1.05); /* Grows slightly on hover */
+  transform: scale(1.05);
 }
 
 .btn {
@@ -70,11 +63,11 @@
   background-color: #00cccc;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
   }
 
   .about-image img {
@@ -87,6 +80,14 @@
   }
 
   .about-text h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
   }
 }
