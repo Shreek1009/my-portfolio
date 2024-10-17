@@ -1,3 +1,4 @@
+/* About Section Styling */
 .about-section {
   display: flex;
   align-items: center;
@@ -10,30 +11,32 @@
 }
 
 .about-text {
-  max-width: 600px; /* Adjust text container width */
+  max-width: 600px;
   text-align: left;
 }
 
-/* Styling for the Hello! I am Shreekara B text */
+/* Greeting and name highlight */
 .greeting-text {
-  font-size: 3rem;
+  font-size: 3rem; /* Large font size */
   font-weight: bold;
-  color: #fff;  /* White color for the main greeting */
+  color: #ffffff; /* White color */
   margin-bottom: 10px;
 }
 
 .name-highlight {
-  color: #fff;  /* Keep the name white */
+  color: #ffffff; /* White color for the name */
+  font-weight: bold;
 }
 
-/* Typing effect style */
+/* Typing effect highlighting */
 .effect-highlight {
-  font-size: 2.5rem;  /* Slightly smaller size for the typing effect */
+  font-size: 2rem; /* Size for the typing effect */
   font-weight: bold;
-  color: #00ffff;  /* Blue color for the effect text */
+  color: #00ffff; /* Cyan color for the typing effect */
   margin-bottom: 20px;
 }
 
+/* Paragraph text */
 .about-text p {
   font-size: 1.2rem;
   color: #cccccc;
@@ -41,18 +44,21 @@
   line-height: 1.6;
 }
 
-.about-image img {
-  width: 300px;
-  border-radius: 15px;
-  object-fit: cover;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Add a shadow */
-  transition: transform 0.3s; /* Optional animation effect */
+/* Social icons styling */
+.social-icons {
+  display: flex;
+  gap: 20px;
 }
 
-.about-image img:hover {
-  transform: scale(1.05); /* Grows slightly on hover */
+.social-icons img {
+  transition: transform 0.3s;
 }
 
+.social-icons img:hover {
+  transform: scale(1.1); /* Grows slightly on hover */
+}
+
+/* Button styling */
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -70,6 +76,18 @@
   background-color: #00cccc;
 }
 
+/* Image styling */
+.about-image img {
+  width: 300px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.about-image img:hover {
+  transform: scale(1.05); /* Grows slightly on hover */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .about-section {
@@ -77,16 +95,20 @@
     text-align: center;
   }
 
+  .about-text {
+    max-width: 100%;
+  }
+
   .about-image img {
     width: 250px;
     margin: 20px 0;
   }
 
-  .about-text h1 {
+  .greeting-text {
     font-size: 2.5rem;
   }
 
-  .about-text h2 {
+  .effect-highlight {
     font-size: 1.5rem;
   }
 }
