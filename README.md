@@ -1,5 +1,6 @@
 <h1 align="center">Hi 👋, I'm Shreekara B</h1>
 <h3 align="center">
-  This is my portfolio: 
-  <a href="https://shreekara-portfolio.vercel.app/" target="_blank" rel="noreferrer">View my Portfolio</a>
+  Welcome to my portfolio! 
+  <br>
+  <a href="https://shreekara-portfolio.vercel.app/" target="_blank" rel="noreferrer" class="portfolio-link">Explore My Work</a>
 </h3>
