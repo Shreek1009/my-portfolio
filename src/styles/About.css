@@ -1,3 +1,4 @@
+/* About Section Layout */
 .about-section {
   display: flex;
   align-items: center;
@@ -7,8 +8,10 @@
   margin: 0 auto;
   min-height: 100vh;
   gap: 50px;
+  padding-top: 80px;  /* Reduced padding-top for all devices */
 }
 
+/* About Text Styling */
 .about-text {
   max-width: 600px;
 }
@@ -17,11 +20,12 @@
 .typing-effect {
   color: #00ffff;
   font-weight: bold;
+  font-size: 2rem;
 }
 
-/* Heading and Paragraph */
+/* Heading and Paragraph Styling */
 .about-text h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: white;
   margin-bottom: 20px;
 }
@@ -35,9 +39,9 @@
 
 /* Social Media Icons Styling */
 .social-icons {
-  margin-top: 20px;  /* Adds space between text and icons */
+  margin-top: 20px;
   display: flex;
-  gap: 10px;  /* Adds space between icons */
+  gap: 10px;
 }
 
 /* Button Styling */
@@ -48,7 +52,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;  /* Adds space between the button and social icons */
+  margin-top: 20px;
   display: inline-block;
 }
 
@@ -69,14 +73,36 @@
   transform: scale(1.05);
 }
 
-/* Responsive Design */
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column;
     text-align: center;
+    padding-top: 120px; /* Ensure enough padding on mobile to avoid header overlap */
   }
 
   .about-image img {
     width: 250px;
+  }
+
+  .about-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .typing-effect {
+    font-size: 1.8rem;
+  }
+
+  /* Center Social Media Icons on Mobile */
+  .social-icons {
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+/* For larger screens (desktop/tablet) */
+@media (min-width: 769px) {
+  .about-section {
+    padding-top: 10px;  /* Reduced padding on desktop for less gap */
   }
 }
