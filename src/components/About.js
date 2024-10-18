@@ -2,6 +2,7 @@ import React from 'react';
 import TypingEffect from 'react-typing-effect';
 import '../styles/About.css';
 import profileImg from '../assets/shreekara.jpg';
+import myresume from '../assets/myresume.pdf';  // Import the resume file
 
 const About = () => {
   return (
@@ -34,7 +35,7 @@ const About = () => {
             <img src="https://i.pinimg.com/564x/fb/af/3a/fbaf3a7a128b388ab2626aa0aad02651.jpg" alt="Blogspot" height="30" width="40" />
           </a>
         </div>
-        <a href="#cv" className="btn">Download CV</a>
+        <a href={myresume} className="btn" download>Download CV</a>  {/* Updated button to link to resume */}
       </div>
       <div className="about-image">
         <img src={profileImg} alt="Shreekara B" />

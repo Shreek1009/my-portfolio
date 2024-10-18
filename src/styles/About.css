@@ -9,6 +9,7 @@
   min-height: 100vh;
   gap: 80px;  /* Increased gap between text and image */
   padding-top: 80px;  /* Reduced padding-top for all devices */
+  margin-bottom: 1px;  /* Decreased space below About section */
 }
 
 /* Existing About Text Styling */
@@ -22,9 +23,8 @@
   font-size: 3.2rem;
   color: white;
   margin-bottom: 20px;
-  text-align: left; /* Center the greeting line */
+  text-align: left; /* Left align the greeting line */
 }
-
 
 /* Typing Effect Styling */
 .typing-effect {
@@ -34,12 +34,6 @@
 }
 
 /* Heading and Paragraph Styling */
-.about-text h1 {
-  font-size: 3.2rem;
-  color: white;
-  margin-bottom: 20px;
-}
-
 .about-text p {
   font-size: 1.2rem;
   color: #cccccc;
@@ -101,6 +95,7 @@
     text-align: center;
     padding-top: 120px; /* Ensure enough padding on mobile to avoid header overlap */
     gap: 30px;  /* Reduced gap for mobile layout */
+    margin-bottom: 15px; /* Reduced space below About section on mobile */
   }
 
   .about-image img {
