@@ -1,4 +1,5 @@
 <h1 align="center">Hi 👋, I'm Shreekara B</h1>
+<<<<<<< HEAD
 <h3 align="center">Aspiring Web Developer | MERN Stack Enthusiast | Blogger |</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=shreek1009&label=Profile%20views&color=0e75b6&style=flat" alt="shreek1009" /> </p>
@@ -40,3 +41,10 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=shreek1009&show_icons=true&locale=en" alt="shreek1009" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=shreek1009&" alt="shreek1009" /></p>
+=======
+<h3 align="center">
+  Welcome to my portfolio! 
+  <br>
+  <a href="https://shreekara-portfolio.vercel.app/" target="_blank" rel="noreferrer" class="portfolio-link">Explore My Work</a>
+</h3>
+>>>>>>> 2c27800aa59a38454bff811084819e1a7f1581cb
