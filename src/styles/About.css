@@ -11,11 +11,20 @@
   padding-top: 80px;  /* Reduced padding-top for all devices */
 }
 
-/* About Text Styling */
+/* Existing About Text Styling */
 .about-text {
   max-width: 600px;
-  text-align: justify;
+  text-align: justify; /* This keeps other text justified */
 }
+
+/* Specific style for the greeting line */
+.about-text h1 {
+  font-size: 3.2rem;
+  color: white;
+  margin-bottom: 20px;
+  text-align: left; /* Center the greeting line */
+}
+
 
 /* Typing Effect Styling */
 .typing-effect {
@@ -59,6 +68,15 @@
 
 .btn:hover {
   background-color: #00cccc;
+}
+
+/* Center Download CV Button on Mobile */
+@media (max-width: 768px) {
+  .btn {
+    display: block;  /* Make button a block element */
+    margin: 20px auto;  /* Center the button on mobile */
+    width: fit-content;  /* Adjust button width to fit its content */
+  }
 }
 
 /* Image Styling (Square Shape) */
