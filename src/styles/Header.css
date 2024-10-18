@@ -6,50 +6,39 @@
   background-color: #000;
   z-index: 100;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 70px;
 }
 
-.header h1 {
-  color: #00ffff; /* Keep the same cyan for the name */
-  font-size: 24px;
-  margin-right: auto; /* Push the name to the left */
-}
-
-.header nav {
-  display: flex;
-  gap: 15px;
-}
-
-.header nav a {
-  color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
-  transition: color 0.3s;
-  padding: 10px 15px;
-}
-
-.header nav a:hover {
-  color: #00ffff; /* Keep the hover effect consistent */
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-}
-
-/* Responsive Header */
-@media (max-width: 768px) {
+/* Tablet and Smaller Devices */
+@media only screen and (max-width: 600px) {
   .header {
-    justify-content: space-between;
-    padding: 10px 20px;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+    text-align: center;
   }
 
   .header nav {
+    display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
   }
 
   .header nav a {
-    font-size: 14px;
-    padding: 5px 10px;
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Adjust Logo for Larger Devices */
+@media only screen and (min-width: 1025px) {
+  .header h1 {
+    margin-left: 50px;
+    font-size: 2.5rem;
   }
 }

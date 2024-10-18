@@ -1,22 +1,23 @@
 .skills-section {
     text-align: center;
     padding: 50px;
-}
-
-.skills-icons {
+  }
+  
+  .skills-icons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-}
-
-.skills-icons a img {
+  }
+  
+  .skills-icons a img {
     width: 40px;
     height: 40px;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .skills-section {
-        padding: 30px;
+      padding: 30px;
     }
-}
+  }
+  

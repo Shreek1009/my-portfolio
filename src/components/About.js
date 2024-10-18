@@ -7,20 +7,18 @@ const About = () => {
   return (
     <section id="about" className="about-section">
       <div className="about-text">
-        {/* Hello and Name in large size, bold, and white */}
-        <h1 className="greeting-text">Hello! <span className="name-highlight">I am Shreekara B</span></h1>
-        
-        {/* Typing effect for the title in blue and bold */}
+        <h1>Hello! I am Shreekara B</h1>
         <TypingEffect
+          className="typing-effect"
           text={["Aspiring Web Developer, Blogger, and Content Creator"]}
           speed={100}
           eraseSpeed={50}
           eraseDelay={500}
-          className="effect-highlight"
         />
-        
         <p>
-          I am passionate about building interactive web applications and creating impactful content. I have experience in full-stack development and am actively contributing to projects like the Shri Hariharashwara Temple Official Website. I also enjoy photography and videography, often creating reels and sharing my journey on my YouTube channel.
+          I am passionate about building interactive web applications and creating impactful content. 
+          I have experience in full-stack development and am actively contributing to projects like the Shri Hariharashwara Temple Official Website.
+          I also enjoy photography and videography, often creating reels and sharing my journey on my YouTube channel.
         </p>
         <div className="social-icons">
           <a href="https://github.com/shreekara1009" target="_blank" rel="noreferrer">

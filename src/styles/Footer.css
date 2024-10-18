@@ -3,14 +3,15 @@ footer {
     padding: 20px;
     background-color: #000;
     color: #fff;
-}
-
-footer nav a {
+  }
+  
+  footer nav a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
-}
-
-footer nav a:hover {
+  }
+  
+  footer nav a:hover {
     color: #00ffff;
-}
+  }
+  
