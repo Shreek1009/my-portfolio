@@ -6,16 +6,21 @@ const Blogs = () => {
   const [error, setError] = useState(null);  // State to store errors, if any
 
   useEffect(() => {
-    const blogId = '6494922402847523765';  // Blogspot Blog ID for bshreekara.blogspot.com
+    const blogId = '6658890885641731328';  // Blogspot Blog ID for bshreekara.blogspot.com
     const apiKey = process.env.REACT_APP_BLOGGER_API_KEY;  // Fetching API Key from .env file
 
     // Fetch recent posts from Blogger API
     fetch(`https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${apiKey}`)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then(data => {
         console.log(data);  // Log the API response for debugging
 
-        if (data.items) {
+        if (data.items && data.items.length > 0) {
           setBlogs(data.items.slice(0, 5));  // Set the first 5 blog posts in state
         } else {
           setError('No blog posts found');  // Handle case where no posts are found
