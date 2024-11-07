@@ -11,7 +11,7 @@ const About = () => {
         <h1>Hello! I am Shreekara B</h1>
         <TypingEffect
           className="typing-effect"
-          text={["Aspiring Web Developer, Blogger, and Content Creator"]}
+          text={["Aspiring Frontend Engineer, Tech Enthusiast, Digital Creator, and Content Blogger"]}
           speed={100}
           eraseSpeed={50}
           eraseDelay={500}
