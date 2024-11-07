@@ -67,4 +67,8 @@
       grid-template-columns: 1fr;  /* Stack project cards vertically */
     }
   }
+  .blue-link {
+    color: #00cccc;
+    text-decoration: underline;
+  }
   

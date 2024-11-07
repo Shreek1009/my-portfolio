@@ -10,35 +10,34 @@
   font-size: 2rem;
 }
 
-.contact-section form {
+.contact-section p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.social-icons {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+  margin-top: 20px;
 }
 
-.contact-section form input,
-.contact-section form textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.social-icons img {
+  height: 30px;
+  width: 30px;
+  transition: transform 0.2s;
 }
 
-.contact-section form button {
-  padding: 10px;
-  background-color: #00ffff;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-section form button:hover {
-  background-color: #0366d6;
-  color: #fff;
+.social-icons img:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 @media (max-width: 768px) {
   .contact-section {
     padding: 20px;
+  }
+
+  .contact-section h2 {
+    font-size: 1.8rem;
   }
 }
