@@ -1,41 +1,49 @@
-/* Blogs Section Styling */
 .blogs-section {
-    padding: 50px 0;
-    text-align: center;
-    background-color: #1c1c1c;
-    color: #fff;
-  }
-  
-  .blogs-section h2 {
-    font-size: 2.5rem;
-    color: #00ffff;
-    margin-bottom: 30px;
-  }
-  
-  .blogs-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .blogs-section li {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-  }
-  
-  .blogs-section a {
-    color: #00ffff;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .blogs-section a:hover {
-    text-decoration: underline;
-    color: #00cccc;
-  }
-  
-  .blogs-section p {
-    color: #ccc;
-    font-size: 0.9rem;
-    margin-top: 5px;
-  }
-  
+  padding: 50px 0;
+  text-align: center;
+  background-color: #1c1c1c;
+  color: #fff;
+  max-width: 1200px; /* Increase the maximum width for the entire section */
+  margin: 0 auto; /* Center the section on the page */
+}
+
+.blogs-section h2 {
+  font-size: 2.5rem;
+  color: #00ffff;
+  margin-bottom: 30px;
+}
+
+.blogs-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blogs-section li {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.blogs-section li:hover,
+.blogs-section li:active {
+  transform: scale(1.02); /* Adjusted scale to prevent overflow */
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+}
+
+.blogs-section a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.blogs-section a:hover {
+  text-decoration: underline;
+  color: #00cccc;
+}
+
+.blogs-section p {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
