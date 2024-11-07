@@ -15,6 +15,16 @@
   margin: 10px 0;
 }
 
+.contact-section a {
+  color: lightblue; /* Light blue color for the email link */
+  text-decoration: none; /* Removes underline */
+}
+
+.contact-section a:hover {
+  color: #00cccc; /* Optional: darker blue on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
