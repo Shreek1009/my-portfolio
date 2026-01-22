@@ -14,7 +14,7 @@
 /* Existing About Text Styling */
 .about-text {
   max-width: 600px;
-  text-align: justify; /* This keeps other text justified */
+  text-align: justify;
 }
 
 /* Specific style for the greeting line */
@@ -22,7 +22,7 @@
   font-size: 3.2rem;
   color: white;
   margin-bottom: 20px;
-  text-align: left; /* Left align the greeting line */
+  text-align: left;
 }
 
 /* Typing Effect Styling */
@@ -47,21 +47,34 @@
   gap: 10px;
 }
 
-/* Button Styling */
+/* --- BUTTON STYLING UPDATED --- */
+
+/* Container to hold buttons side-by-side */
+.about-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px; /* Space between buttons */
+}
+
 .btn {
   background-color: #00ffff;
-  color: #000;
+  color: #000 !important; /* Force black text to override 'visited' link color */
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
   display: inline-block;
+  text-decoration: none; /* Removes underline from links */
+  font-weight: 600; /* Makes text slightly bolder like a button */
+  transition: 0.3s ease;
 }
 
 .btn:hover {
   background-color: #00cccc;
+  transform: translateY(-2px); /* Slight lift effect */
 }
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
 
 /* Tablet - Large (769px - 1024px) */
 @media (max-width: 1024px) {
@@ -95,6 +108,8 @@
     gap: 30px;
     padding: 40px 4%;
     min-height: auto;
+    text-align: center; /* Center alignment for mobile */
+    padding-top: 120px;
   }
 
   .about-text {
@@ -124,12 +139,16 @@
     width: 250px;
     height: 250px;
     border-radius: 12px;
+    margin-left: 0;
   }
 
-  .btn {
-    display: block;
-    margin: 15px auto 15px 0;
-    width: fit-content;
+  /* Center buttons on tablet/mobile */
+  .about-buttons {
+    justify-content: center;
+  }
+  
+  .social-icons {
+    justify-content: center;
   }
 }
 
@@ -140,6 +159,7 @@
     gap: 20px;
     padding: 30px 3%;
     min-height: auto;
+    padding-top: 100px;
   }
 
   .about-text {
@@ -165,14 +185,18 @@
   .social-icons {
     margin-top: 15px;
     gap: 8px;
+    justify-content: center;
+  }
+  
+  /* Ensure buttons are centered and wrap if screen is very small */
+  .about-buttons {
+    flex-wrap: wrap; 
+    justify-content: center;
   }
 
   .btn {
-    display: block;
-    margin: 12px 0;
     padding: 8px 16px;
     font-size: 0.9rem;
-    width: fit-content;
   }
 
   .about-image {
@@ -184,6 +208,7 @@
     height: 200px;
     border-radius: 10px;
     object-fit: cover;
+    margin-left: 0;
   }
 }
 
@@ -200,37 +225,6 @@
 
 .about-image img:hover {
   transform: scale(1.05);  /* Slight zoom effect on hover */
-}
-
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 120px; /* Ensure enough padding on mobile to avoid header overlap */
-    gap: 30px;  /* Reduced gap for mobile layout */
-    margin-bottom: 15px; /* Reduced space below About section on mobile */
-  }
-
-  .about-image img {
-    width: 200px;  /* Smaller size for mobile */
-    height: 200px; /* Maintain square shape on mobile */
-    margin-left: 0; /* No margin needed for mobile, stacked vertically */
-  }
-
-  .about-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .typing-effect {
-    font-size: 1.8rem;
-  }
-
-  /* Center Social Media Icons on Mobile */
-  .social-icons {
-    justify-content: center;
-    margin: 0 auto;
-  }
 }
 
 /* For larger screens (desktop/tablet) */

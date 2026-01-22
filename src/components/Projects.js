@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Projects.css';
 
 const Projects = () => {
+
   const TechBadge = ({ tech }) => (
     <span className="tech-badge">{tech}</span>
   );
@@ -15,9 +16,9 @@ const Projects = () => {
         </div>
         {role && <h4 className="role">{role}</h4>}
       </div>
-      
+
       <p className="description">{description}</p>
-      
+
       <div className="tech-stack">
         {technologies.map((tech, idx) => (
           <TechBadge key={idx} tech={tech} />
@@ -44,6 +45,7 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section">
       <h2>AI & Data Projects</h2>
+
       <div className="projects-grid">
         <ProjectCard
           title="Wearable Seizure Detection Device using Deep Learning"
@@ -53,6 +55,7 @@ const Projects = () => {
           links={{ github: 'https://github.com/VoidGeek/EEG-Detection-CNN-LSTM.git' }}
           delay="0"
         />
+
         <ProjectCard
           title="ZenVision – Real-Time Yoga Pose Recognition System"
           description="Computer vision system detecting & classifying yoga poses from live video feed. Provides real-time posture correction feedback to help users improve form and prevent injuries."
@@ -64,6 +67,7 @@ const Projects = () => {
       </div>
 
       <h2 style={{ marginTop: "60px" }}>Full-Stack & Client Projects</h2>
+
       <div className="projects-grid">
         <ProjectCard
           title="Shri Harihareshwara Temple Official Website"
@@ -74,14 +78,16 @@ const Projects = () => {
           links={{ live: 'https://www.shriharihareshwara.org' }}
           delay="0"
         />
+
         <ProjectCard
           title="Shrirama Temple Chokkadi – Official Website"
-          description="Led a team of developers (ISDC) to engineer an interactive web portal for Shrirama Temple, Chokkadi.Developed and deployed the official website for Shrirama Temple, Chokkadi. Enabled online access to temple information, events and announcements. Handled hosting, domain setup and deployment for production."
+          description="Led a team of developers (ISDC) to engineer an interactive web portal for Shrirama Temple, Chokkadi. Enabled online access to temple information, events and announcements. Handled hosting, domain setup and deployment for production."
           technologies={['React', 'Tailwind CSS', 'Hosting', 'Domain Management']}
           category="Web"
           links={{ live: 'https://www.srtchokkadi.org' }}
           delay="100"
         />
+
         <ProjectCard
           title="Blog Management System"
           description="Created a comprehensive system for content creation, publication management, and user engagement. Full CMS functionality with database-driven architecture."
