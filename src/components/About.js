@@ -11,16 +11,24 @@ const About = () => {
         <h1>Hello! I am Shreekara B</h1>
         <TypingEffect
           className="typing-effect"
-          text={["Aspiring Frontend Engineer, Tech Enthusiast, Digital Creator, and Content Blogger"]}
+          text={["Data Engineer at Oitro | AI & Full-Stack Developer | Blogger | Photographer & Videographer"]}
           speed={100}
           eraseSpeed={50}
           eraseDelay={500}
         />
-        <p>
-          I am passionate about building interactive web applications and creating impactful content. 
-          I have experience in full-stack development and am actively contributing to projects like the Shri Hariharashwara Temple Official Website.
-          I also enjoy photography and videography, often creating reels and sharing my journey on my YouTube channel.
-        </p>
+       <p>
+  I am passionate about building scalable and interactive web applications and creating
+  impactful digital solutions that combine creativity with technology. With hands-on
+  experience in full-stack development, data engineering, and AI-driven projects, I
+  actively contribute to real-world, client-based applications and production deployments.
+</p>
+
+<p>
+  Beyond coding, I enjoy photography and videography, capturing moments and sharing my
+  journey through reels, blogs, and my YouTube channel. I believe in using technology not
+  only to solve problems, but also to tell stories, build communities, and create meaningful
+  experiences.
+</p>
         <div className="social-icons">
           <a href="https://github.com/shreekara1009" target="_blank" rel="noreferrer">
             <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="GitHub" height="30" width="40" />
