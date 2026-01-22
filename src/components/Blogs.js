@@ -51,6 +51,8 @@ const Blogs = () => {
             <li
               key={index}
               className="blog-card"
+              data-aos="fade-up"
+              data-aos-delay={index * 50}
               onClick={() => window.open(blog.url, '_blank')}
             >
               {image && <img src={image} alt={blog.title} className="blog-preview-img" />}

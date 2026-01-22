@@ -20,4 +20,46 @@
       padding: 30px;
     }
   }
-  
+
+/* ===== New Skill Cards Layout ===== */
+
+.skills-section h3 {
+  color: #00ffff;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: #2b2b2b;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,255,255,0.15);
+}
+
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,255,255,0.25);
+  border-color: #00ffff;
+}
+
+.skill-card h4 {
+  color: #00ffff;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.skill-card p {
+  color: #cccccc;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}

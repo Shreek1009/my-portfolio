@@ -1,0 +1,241 @@
+.experience-page {
+  padding: 80px 12%;
+  color: white;
+  background-color: #1c1c1c;
+  min-height: 100vh;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 36px;
+  color: #00fff5;
+  margin-bottom: 60px;
+}
+
+/* ===== TIMELINE (Professional) ===== */
+
+.timeline {
+  position: relative;
+  margin-left: 30px;
+  margin-bottom: 80px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #00fff5;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: #00fff5;
+  border-radius: 50%;
+  margin-left: -2px;
+  margin-top: 6px;
+  box-shadow: 0 0 10px #00fff5;
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  background: #3a3a3a;
+  padding: 18px 22px;
+  border-radius: 14px;
+  width: 100%;
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  border: 1px solid #00fff5;
+  box-shadow: 0 8px 16px rgba(0, 255, 245, 0.15);
+}
+
+.timeline-content h3 {
+  color: #00fff5;
+  margin: 0 0 4px 0;
+  font-size: 18px;
+}
+
+.timeline-content span {
+  font-size: 13px;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.timeline-content ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.timeline-content li {
+  margin-bottom: 6px;
+}
+
+.company-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.company-header div h3 {
+  margin: 0;
+}
+
+.company-header div span {
+  display: block;
+}
+
+.tech {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #00fff5;
+  font-weight: 500;
+}
+
+/* ===== VOLUNTEERING SECTION ===== */
+
+.section-title {
+  font-size: 28px;
+  color: #00fff5;
+  margin: 80px 0 40px 0;
+  text-align: left;
+}
+
+.volunteering-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.volunteer-card {
+  background: #3a3a3a;
+  padding: 20px 22px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+
+.volunteer-card:hover {
+  transform: translateY(-4px);
+  border: 1px solid #00fff5;
+  box-shadow: 0 8px 16px rgba(0, 255, 245, 0.15);
+}
+
+.volunteer-card h3 {
+  color: #00fff5;
+  margin: 0 0 4px 0;
+  font-size: 18px;
+}
+
+
+.volunteer-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.volunteer-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.volunteer-header div h3 {
+  margin: 0;
+}
+
+.volunteer-header div h4 {
+  margin: 0;
+}
+.volunteer-card h4 {
+  font-size: 14px;
+  opacity: 0.85;
+  margin: 0 0 6px 0;
+  color: #cccccc;
+}
+
+.volunteer-date {
+  font-size: 13px;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.volunteer-card ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.volunteer-card li {
+  margin-bottom: 6px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .experience-page {
+    padding: 60px 5%;
+  }
+
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .timeline {
+    margin-left: 20px;
+  }
+
+  .timeline::before {
+    left: 4px;
+  }
+
+  .timeline-dot {
+    margin-left: -8px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin: 60px 0 30px 0;
+  }
+
+  .volunteering-cards {
+    grid-template-columns: 1fr;
+  }
+}
