@@ -50,7 +50,7 @@ const Projects = () => {
           description="Real-time seizure detection using EEG signals + LSTM neural networks (~90% accuracy). Automatic caregiver alert system for faster medical response and improved patient safety."
           technologies={['Python', 'LSTM', 'ANN', 'PCA', 'EEG Processing']}
           category="AI"
-          links={{ github: 'https://github.com' }}
+          links={{ github: 'https://github.com/VoidGeek/EEG-Detection-CNN-LSTM.git' }}
           delay="0"
         />
         <ProjectCard
