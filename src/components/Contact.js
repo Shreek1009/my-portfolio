@@ -3,7 +3,7 @@ import '../styles/Contact.css';
 
 const Contact = () => {
   return (
-    <section className="contact-section">
+    <section id="contact" className="contact-section">
       <h2>Contact Me</h2>
       <p>Feel free to reach out via email or connect with me on social media:</p>
       <p>Email: <a href="mailto:shreekarab5@gmail.com">shreekarab5@gmail.com</a></p>

@@ -1,10 +1,10 @@
 .blogs-section {
-  padding: 50px 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 60px;
   text-align: center;
   background-color: #1c1c1c;
   color: #fff;
-  max-width: 1200px; /* Increase the maximum width for the entire section */
-  margin: 0 auto; /* Center the section on the page */
 }
 
 .blogs-section h2 {
@@ -16,25 +16,33 @@
 .blogs-section ul {
   list-style: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .blogs-section li {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
+  font-size: 1rem;
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.blogs-section li:hover,
-.blogs-section li:active {
-  transform: scale(1.02); /* Adjusted scale to prevent overflow */
-  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+.blogs-section li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
 }
 
 .blogs-section a {
   color: #00ffff;
   text-decoration: none;
   transition: color 0.3s;
+  display: block;
 }
 
 .blogs-section a:hover {

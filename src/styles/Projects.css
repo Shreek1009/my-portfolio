@@ -4,6 +4,8 @@
     text-align: center;
     background-color: #1c1c1c;
     color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .projects-section h2 {
