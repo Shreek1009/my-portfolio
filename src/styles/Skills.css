@@ -1,7 +1,7 @@
 .skills-section {
     text-align: center;
     padding: 50px;
-  }
+}
   
   .skills-icons {
     display: flex;
@@ -62,4 +62,134 @@
   color: #cccccc;
   line-height: 1.6;
   font-size: 0.95rem;
+}
+
+/* Tablet - Large (769px - 1024px) */
+@media (max-width: 1024px) {
+  .skills-section {
+    padding: 40px 6%;
+  }
+
+  .skills-section h3 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+  }
+
+  .skill-card {
+    padding: 18px;
+  }
+
+  .skill-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .skill-card p {
+    font-size: 0.9rem;
+  }
+
+  .skills-icons {
+    gap: 15px;
+  }
+
+  .skills-icons a img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Tablet - Medium (601px - 768px) */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 30px 4%;
+  }
+
+  .skills-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    max-width: 100%;
+  }
+
+  .skill-card {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .skill-card h4 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+
+  .skill-card p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .skills-icons {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .skills-icons a img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Mobile (max 600px) */
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 25px 3%;
+  }
+
+  .skills-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .skill-card {
+    padding: 14px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .skill-card:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+
+  .skill-card h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .skill-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .skills-icons {
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  .skills-icons a img {
+    width: 30px;
+    height: 30px;
+  }
 }

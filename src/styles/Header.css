@@ -1,6 +1,6 @@
 /* Header Styling */
 .header {
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   background-color: #000;
@@ -9,34 +9,81 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 70px;
+  box-sizing: border-box;
 }
 
-/* Tablet and Smaller Devices */
-@media only screen and (max-width: 600px) {
+/* Tablet - Large (769px - 1024px) */
+@media (max-width: 1024px) {
   .header {
-    flex-direction: column;
-    padding: 10px;
+    padding: 15px 5%;
   }
 
   .header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+
+  .header nav a {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+}
+
+/* Tablet - Medium (601px - 768px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 4%;
+    flex-wrap: wrap;
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+    margin-left: 0;
+  }
+
+  .header nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .header nav a {
+    font-size: 0.85rem;
+    padding: 0 8px;
+  }
+}
+
+/* Mobile (max 600px) */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    padding: 12px 3%;
+    gap: 10px;
+  }
+
+  .header h1 {
+    font-size: 1.4rem;
     text-align: center;
+    margin: 0;
   }
 
   .header nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
+    width: 100%;
   }
 
   .header nav a {
-    padding: 10px 0;
+    font-size: 0.8rem;
+    padding: 6px 0;
     text-align: center;
+    width: 100%;
   }
 }
 
 /* Adjust Logo for Larger Devices */
-@media only screen and (min-width: 1025px) {
+@media (min-width: 1025px) {
   .header h1 {
     margin-left: 50px;
     font-size: 2.5rem;

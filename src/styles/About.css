@@ -7,9 +7,8 @@
   max-width: 1200px;
   margin: 0 auto;
   min-height: 100vh;
-  gap: 80px;  /* Increased gap between text and image */
-  padding-top: 80px;  /* Reduced padding-top for all devices */
-  margin-bottom: 1px;  /* Decreased space below About section */
+  gap: 80px;
+  margin-bottom: 1px;
 }
 
 /* Existing About Text Styling */
@@ -64,12 +63,127 @@
   background-color: #00cccc;
 }
 
-/* Center Download CV Button on Mobile */
+/* Tablet - Large (769px - 1024px) */
+@media (max-width: 1024px) {
+  .about-section {
+    gap: 60px;
+    padding: 40px 5%;
+  }
+
+  .about-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .typing-effect {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+  }
+
+  .about-image img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Tablet - Medium (601px - 768px) */
 @media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 4%;
+    min-height: auto;
+  }
+
+  .about-text {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .about-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+
+  .typing-effect {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .about-image {
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 12px;
+  }
+
   .btn {
-    display: block;  /* Make button a block element */
-    margin: 20px auto;  /* Center the button on mobile */
-    width: fit-content;  /* Adjust button width to fit its content */
+    display: block;
+    margin: 15px auto 15px 0;
+    width: fit-content;
+  }
+}
+
+/* Mobile (max 600px) */
+@media (max-width: 600px) {
+  .about-section {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 3%;
+    min-height: auto;
+  }
+
+  .about-text {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .typing-effect {
+    font-size: 1.2rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    gap: 8px;
+  }
+
+  .btn {
+    display: block;
+    margin: 12px 0;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    width: fit-content;
+  }
+
+  .about-image {
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
   }
 }
 

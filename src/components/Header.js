@@ -1,18 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/Header.css'; 
 
 const Header = () => {
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path ? 'active' : '';
+  };
+
   return (
     <header className="header">
       <h1>My portfolio</h1>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/skills">Skills</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/experience">Experience</Link>
-        <Link to="/blogs">Blogs</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/" className={isActive('/')}>Home</Link>
+        <Link to="/skills" className={isActive('/skills')}>Skills</Link>
+        <Link to="/projects" className={isActive('/projects')}>Projects</Link>
+        <Link to="/experience" className={isActive('/experience')}>Experience</Link>
+        <Link to="/blogs" className={isActive('/blogs')}>Blogs</Link>
+        <Link to="/contact" className={isActive('/contact')}>Contact</Link>
       </nav>
     </header>
   );

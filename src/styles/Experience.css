@@ -206,11 +206,36 @@
   margin-bottom: 6px;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE DESIGN ===== */
 
+/* Tablet - Large (769px - 1024px) */
+@media (max-width: 1024px) {
+  .experience-page {
+    padding: 60px 8%;
+  }
+
+  .page-title {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+
+  .timeline-content h3 {
+    font-size: 16px;
+  }
+
+  .timeline-content ul {
+    font-size: 13px;
+  }
+
+  .volunteering-cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* Tablet - Medium (601px - 768px) */
 @media (max-width: 768px) {
   .experience-page {
-    padding: 60px 5%;
+    padding: 50px 5%;
   }
 
   .page-title {
@@ -219,23 +244,195 @@
   }
 
   .timeline {
-    margin-left: 20px;
+    margin-left: 15px;
   }
 
   .timeline::before {
     left: 4px;
+    width: 2px;
+  }
+
+  .timeline-item {
+    gap: 15px;
+    margin-bottom: 35px;
   }
 
   .timeline-dot {
+    width: 16px;
+    height: 16px;
     margin-left: -8px;
+    margin-top: 4px;
+  }
+
+  .timeline-content {
+    padding: 15px 18px;
+  }
+
+  .timeline-content h3 {
+    font-size: 15px;
+  }
+
+  .timeline-content span {
+    font-size: 12px;
+  }
+
+  .timeline-content ul {
+    font-size: 13px;
+    padding-left: 15px;
+  }
+
+  .company-header {
+    gap: 10px;
+  }
+
+  .company-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tech {
+    font-size: 12px;
   }
 
   .section-title {
     font-size: 24px;
-    margin: 60px 0 30px 0;
+    margin: 50px 0 25px 0;
   }
 
   .volunteering-cards {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .volunteer-card {
+    padding: 15px 18px;
+  }
+
+  .volunteer-card h3 {
+    font-size: 16px;
+  }
+
+  .volunteer-card h4 {
+    font-size: 13px;
+  }
+}
+
+/* Mobile (max 600px) */
+@media (max-width: 600px) {
+  .experience-page {
+    padding: 30px 3%;
+
+  }
+
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .timeline {
+    margin-left: 12px;
+    margin-bottom: 60px;
+  }
+
+  .timeline::before {
+    left: 3px;
+    width: 1.5px;
+  }
+
+  .timeline-item {
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    margin-top: 3px;
+  }
+
+  .timeline-content {
+    padding: 12px 15px;
+    border-radius: 10px;
+  }
+
+  .timeline-content h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .timeline-content span {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .timeline-content ul {
+    font-size: 12px;
+    padding-left: 14px;
+    line-height: 1.5;
+  }
+
+  .timeline-content li {
+    margin-bottom: 4px;
+  }
+
+  .company-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .company-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .company-header div h3 {
+    font-size: 13px;
+  }
+
+  .tech {
+    font-size: 11px;
+    margin-top: 8px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin: 40px 0 20px 0;
+  }
+
+  .volunteering-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .volunteer-card {
+    padding: 12px 15px;
+  }
+
+  .volunteer-header {
+    gap: 10px;
+  }
+
+  .volunteer-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .volunteer-card h3 {
+    font-size: 14px;
+  }
+
+  .volunteer-card h4 {
+    font-size: 12px;
+  }
+
+  .volunteer-date {
+    font-size: 11px;
+  }
+
+  .volunteer-card ul {
+    font-size: 12px;
+    padding-left: 14px;
   }
 }

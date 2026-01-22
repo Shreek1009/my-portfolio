@@ -6,7 +6,7 @@
     color: #fff;
     max-width: 1200px;
     margin: 0 auto;
-  }
+}
   
   .projects-section h2 {
     font-size: 2.5rem;
@@ -190,19 +190,159 @@
     transform: translateY(-2px);
   }
   
-  /* Mobile Responsive Adjustments */
+  /* Tablet - Large (769px - 1024px) */
+  @media (max-width: 1024px) {
+    .projects-section {
+      padding: 40px 6%;
+      max-width: 100%;
+    }
+
+    .projects-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+    }
+
+    .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      padding: 20px;
+    }
+
+    .project-card h3 {
+      font-size: 1.15rem;
+    }
+
+    .description {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Tablet - Medium (601px - 768px) */
   @media (max-width: 768px) {
+    .projects-section {
+      padding: 30px 4%;
+    }
+
+    .projects-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
     .projects-grid {
       grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .project-card {
+      padding: 18px;
+      border-radius: 10px;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
     }
 
     .title-section {
       flex-direction: column;
       align-items: flex-start;
+      gap: 8px;
+    }
+
+    .project-card h3 {
+      font-size: 1.1rem;
+    }
+
+    .description {
+      font-size: 0.88rem;
+      margin-bottom: 12px;
     }
 
     .action-buttons {
       flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn-live,
+    .btn-github {
+      font-size: 0.85rem;
+      padding: 8px 12px;
+    }
+  }
+
+  /* Mobile (max 600px) */
+  @media (max-width: 600px) {
+    .projects-section {
+      padding: 25px 3%;
+      padding-top: 130px;
+    }
+
+    .projects-section h2 {
+      font-size: 1.7rem;
+      margin-bottom: 15px;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .project-card {
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-card:hover {
+      transform: scale(1.01);
+    }
+
+    .card-header {
+      margin-bottom: 12px;
+    }
+
+    .title-section {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .project-card h3 {
+      font-size: 1rem;
+    }
+
+    .project-card h4,
+    .role {
+      font-size: 0.8rem;
+    }
+
+    .description {
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .tech-stack {
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .tech-badge {
+      padding: 4px 8px;
+      font-size: 0.75rem;
+    }
+
+    .action-buttons {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .btn-live,
+    .btn-github {
+      font-size: 0.8rem;
+      padding: 7px 10px;
     }
   }
   

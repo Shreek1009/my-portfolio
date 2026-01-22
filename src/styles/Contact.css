@@ -42,12 +42,84 @@
   transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-@media (max-width: 768px) {
+/* Tablet - Large (769px - 1024px) */
+@media (max-width: 1024px) {
   .contact-section {
-    padding: 20px;
+    padding: 40px 6%;
+    max-width: 100%;
   }
 
   .contact-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+    margin-bottom: 25px;
+  }
+
+  .contact-section p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet - Medium (601px - 768px) */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 30px 4%;
+    max-width: 100%;
+  }
+
+  .contact-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-section p {
+    font-size: 0.95rem;
+    margin: 8px 0;
+  }
+
+  .social-icons {
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .social-icons img {
+    height: 28px;
+    width: 28px;
+  }
+}
+
+/* Mobile (max 600px) */
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 20px 3%;
+    max-width: 100%;
+  }
+
+  .contact-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .contact-section p {
+    font-size: 0.9rem;
+    margin: 6px 0;
+    line-height: 1.4;
+  }
+
+  .contact-section a {
+    word-break: break-all;
+  }
+
+  .social-icons {
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .social-icons img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.15);
   }
 }
