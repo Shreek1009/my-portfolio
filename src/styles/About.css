@@ -1,23 +1,24 @@
-/* About Section Layout */
+/* =========================================
+   1. GLOBAL STYLES (Desktop Default)
+   ========================================= */
+
 .about-section {
   display: flex;
-  align-items: center;
+  align-items: center; /* Vertically centers content on desktop */
   justify-content: space-between;
   padding: 50px;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 100vh; /* Full height on desktop */
   gap: 80px;
-  margin-bottom: 1px;
 }
 
-/* Existing About Text Styling */
+/* --- TEXT STYLING --- */
 .about-text {
   max-width: 600px;
   text-align: justify;
 }
 
-/* Specific style for the greeting line */
 .about-text h1 {
   font-size: 3.2rem;
   color: white;
@@ -25,14 +26,12 @@
   text-align: left;
 }
 
-/* Typing Effect Styling */
 .typing-effect {
   color: #00ffff;
   font-weight: bold;
   font-size: 2rem;
 }
 
-/* Heading and Paragraph Styling */
 .about-text p {
   font-size: 1.2rem;
   color: #cccccc;
@@ -40,196 +39,127 @@
   margin-bottom: 20px;
 }
 
-/* Social Media Icons Styling */
+/* --- SOCIAL ICONS --- */
 .social-icons {
   margin-top: 20px;
   display: flex;
   gap: 10px;
 }
 
-/* --- BUTTON STYLING UPDATED --- */
-
-/* Container to hold buttons side-by-side */
+/* --- BUTTONS (Global) --- */
 .about-buttons {
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
-  gap: 15px; /* Space between buttons */
+  gap: 20px;
 }
 
-.btn {
-  background-color: #00ffff;
-  color: #000 !important; /* Force black text to override 'visited' link color */
-  padding: 10px 20px;
+/* We use !important to override browser link colors (purple/blue) */
+.btn, 
+.btn:link, 
+.btn:visited {
+  background-color: #00ffff !important;
+  color: #000 !important;
+  padding: 12px 25px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   display: inline-block;
-  text-decoration: none; /* Removes underline from links */
-  font-weight: 600; /* Makes text slightly bolder like a button */
-  transition: 0.3s ease;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #00cccc;
-  transform: translateY(-2px); /* Slight lift effect */
+  background-color: #00cccc !important;
+  transform: translateY(-3px);
+  color: #000 !important;
+  box-shadow: 0px 5px 15px rgba(0, 255, 255, 0.3);
 }
 
-/* --- RESPONSIVE MEDIA QUERIES --- */
+/* --- IMAGE --- */
+.about-image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
 
-/* Tablet - Large (769px - 1024px) */
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================================
+   2. TABLET STYLES (max-width: 1024px)
+   ========================================= */
 @media (max-width: 1024px) {
   .about-section {
-    gap: 60px;
     padding: 40px 5%;
+    gap: 40px;
   }
-
+  
   .about-text h1 {
     font-size: 2.8rem;
   }
-
+  
   .typing-effect {
-    font-size: 1.8rem;
-  }
-
-  .about-text p {
-    font-size: 1.1rem;
-  }
-
-  .about-image img {
-    width: 300px;
-    height: 300px;
+    font-size: 1.5rem;
   }
 }
 
-/* Tablet - Medium (601px - 768px) */
+/* =========================================
+   3. MOBILE STYLES (max-width: 768px)
+   ========================================= */
 @media (max-width: 768px) {
   .about-section {
-    flex-direction: column;
+    flex-direction: column; /* Stack items vertically */
+    
+    /* FIX: Use flex-start so content starts at top, not middle */
+    justify-content: flex-start; 
+    align-items: center;
+    
+    /* Add padding to top so Navbar doesn't cover text */
+    padding-top: 120px; 
+    padding-bottom: 50px;
+    
+    /* Remove min-height restriction so content flows naturally */
+    min-height: auto; 
+    text-align: center;
     gap: 30px;
-    padding: 40px 4%;
-    min-height: auto;
-    text-align: center; /* Center alignment for mobile */
-    padding-top: 120px;
   }
 
   .about-text {
-    max-width: 100%;
-    text-align: left;
+    width: 100%;
+    text-align: center; /* Center text for mobile look */
   }
 
   .about-text h1 {
     font-size: 2.2rem;
+    text-align: center;
     margin-bottom: 15px;
   }
 
-  .typing-effect {
-    font-size: 1.5rem;
-  }
-
   .about-text p {
+    text-align: center;
     font-size: 1rem;
-    line-height: 1.5;
   }
 
-  .about-image {
-    text-align: center;
+  /* Center the container holding the buttons */
+  .about-buttons {
+    justify-content: center;
+    flex-wrap: wrap; /* Allows buttons to stack if screen is very thin */
+  }
+
+  /* Center social icons */
+  .social-icons {
+    justify-content: center;
   }
 
   .about-image img {
     width: 250px;
     height: 250px;
-    border-radius: 12px;
-    margin-left: 0;
-  }
-
-  /* Center buttons on tablet/mobile */
-  .about-buttons {
-    justify-content: center;
-  }
-  
-  .social-icons {
-    justify-content: center;
-  }
-}
-
-/* Mobile (max 600px) */
-@media (max-width: 600px) {
-  .about-section {
-    flex-direction: column;
-    gap: 20px;
-    padding: 30px 3%;
-    min-height: auto;
-    padding-top: 100px;
-  }
-
-  .about-text {
-    max-width: 100%;
-    text-align: left;
-  }
-
-  .about-text h1 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
-
-  .typing-effect {
-    font-size: 1.2rem;
-  }
-
-  .about-text p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 12px;
-  }
-
-  .social-icons {
-    margin-top: 15px;
-    gap: 8px;
-    justify-content: center;
-  }
-  
-  /* Ensure buttons are centered and wrap if screen is very small */
-  .about-buttons {
-    flex-wrap: wrap; 
-    justify-content: center;
-  }
-
-  .btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-
-  .about-image {
-    text-align: center;
-  }
-
-  .about-image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-left: 0;
-  }
-}
-
-/* Image Styling (Square Shape) */
-.about-image img {
-  width: 350px;   /* Adjusted width for square shape */
-  height: 350px;  /* Set height equal to width for a square */
-  border-radius: 15px;  /* Keep subtle rounded corners */
-  object-fit: cover;  /* Ensure image fits nicely in square */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s;
-  margin-left: 40px;  /* Adds space between the image and the text */
-}
-
-.about-image img:hover {
-  transform: scale(1.05);  /* Slight zoom effect on hover */
-}
-
-/* For larger screens (desktop/tablet) */
-@media (min-width: 769px) {
-  .about-section {
-    padding-top: 0.2px;  /* Reduced padding on desktop for less gap */
+    margin-top: 20px;
   }
 }

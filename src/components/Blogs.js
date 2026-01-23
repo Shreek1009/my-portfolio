@@ -67,5 +67,4 @@ const Blogs = () => {
     </section>
   );
 }
-
 export default Blogs;

@@ -12,5 +12,8 @@ const Footer = () => {
     </footer>
   );
 };
+useEffect(() => {
+  document.title = "Shreekara B | Footer";
+}, []);
 
 export default Footer;
