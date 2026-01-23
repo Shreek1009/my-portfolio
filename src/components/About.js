@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // <--- IMPORT ADDED HERE
 import TypingEffect from 'react-typing-effect';
 import '../styles/About.css';
 import profileImg from '../assets/shreekara.jpg';
@@ -11,12 +12,10 @@ const About = () => {
   useEffect(() => {
     // ---------------------------------------------------------
     // DOUBLE CHECK: Your Channel ID usually starts with "UC"
-    // You wrote "YUC...". If that was a typo, change Y to U.
     // ---------------------------------------------------------
-    const channelId = 'UCv3QmI4GSR3LMkCWywdRafQ'; // I removed the 'Y' assuming it was a typo for 'UC'
+    const channelId = 'UCv3QmI4GSR3LMkCWywdRafQ'; 
     const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY; 
     
-    // Debugging: Check if Key exists (Open Console F12 to see)
     if (!apiKey) console.error("⚠️ API KEY IS MISSING! Check .env file");
 
     const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=3&type=video`;
@@ -87,7 +86,8 @@ const About = () => {
           
           <div className="about-buttons">
             <a href={myresume} className="btn" download>Download CV</a>
-            <a href="#projects" className="btn">View Projects</a>
+            {/* FIXED LINK BELOW */}
+            <Link to="/projects" className="btn">View Projects</Link>
           </div>
         </div>
         
@@ -117,7 +117,6 @@ const About = () => {
               </div>
             ))
           ) : (
-            // FALLBACK: If API fails, show this button instead of empty space
             <div className="api-fallback" style={{gridColumn: '1 / -1', textAlign: 'center'}}>
                <p style={{marginBottom: '20px', color: '#888'}}>
                  {apiError ? "Unable to load videos directly." : "Loading videos..."}
