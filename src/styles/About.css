@@ -1,15 +1,23 @@
 /* =========================================
-   1. GLOBAL STYLES (Desktop Default)
+   1. MAIN CONTAINER
    ========================================= */
+.about-container-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
+/* =========================================
+   2. ORIGINAL BIO SECTION (Restored)
+   ========================================= */
 .about-section {
   display: flex;
-  align-items: center; /* Vertically centers content on desktop */
-  justify-content: space-between;
+  align-items: center; /* Vertically centers content */
+  justify-content: space-between; /* Pushes text left, image right */
   padding: 50px;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh; /* Full height on desktop */
+  min-height: 90vh;
   gap: 80px;
 }
 
@@ -46,14 +54,13 @@
   gap: 10px;
 }
 
-/* --- BUTTONS (Global) --- */
+/* --- BUTTONS --- */
 .about-buttons {
   margin-top: 25px;
   display: flex;
   gap: 20px;
 }
 
-/* We use !important to override browser link colors (purple/blue) */
 .btn, 
 .btn:link, 
 .btn:visited {
@@ -92,68 +99,143 @@
 }
 
 /* =========================================
-   2. TABLET STYLES (max-width: 1024px)
+   3. CREATIVE SECTION (Refined Styling)
    ========================================= */
+.creative-wrapper {
+  padding: 60px 20px 90px; /* Increased padding for a more open feel */
+  text-align: center;
+  border-top: 1px solid #222;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.creative-title {
+  font-size: 2.2rem; /* Slightly larger title */
+  color: #00ffff; /* Cyan accent color */
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.creative-subtitle {
+  color: #e0e0e0; /* Brighter, cleaner white text */
+  margin-bottom: 50px; /* More space before videos */
+  font-size: 1.25rem; /* Larger, more readable font */
+  font-weight: 300; /* Lighter weight for an elegant look */
+  max-width: 800px; /* Prevents text from getting too wide on large screens */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.creative-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider cards */
+  gap: 25px; /* More gap between videos */
+  max-width: 1150px;
+  margin: 0 auto 50px; /* More space below grid */
+}
+
+.creative-card {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  border-radius: 12px; /* Softer corners */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Deeper shadow for depth */
+  border: 1px solid #333;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.creative-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    border-color: #00ffff; /* Glow effect on hover */
+}
+
+.creative-card iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- FOOTER & INSTAGRAM LINK --- */
+.creative-footer {
+    font-size: 1.2rem;
+    margin-top: 40px;
+}
+
+.creative-footer p {
+  display: inline-block;
+  color: #cccccc; /* Brighter than before */
+  margin-right: 12px;
+  font-weight: 400;
+}
+
+.insta-link {
+  color: #00ffff; /* Changed to CYAN to pop and match theme */
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding-bottom: 3px;
+  border-bottom: 2px solid rgba(0, 255, 255, 0.4); /* Subtle cyan underline */
+  transition: all 0.3s ease;
+}
+
+/* NEW HOVER EFFECT: Makes it look like a button */
+.insta-link:hover {
+  text-decoration: none;
+  background-color: #00ffff; /* Cyan background */
+  color: #000; /* Black text */
+  padding: 8px 15px; /* Add padding to make it a button */
+  border-radius: 6px;
+  border-bottom-color: transparent;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Cyan glow */
+}
+
+/* =========================================
+   4. RESPONSIVE MEDIA QUERIES
+   ========================================= */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .about-section {
     padding: 40px 5%;
     gap: 40px;
   }
-  
   .about-text h1 {
     font-size: 2.8rem;
   }
-  
-  .typing-effect {
-    font-size: 1.5rem;
-  }
 }
 
-/* =========================================
-   3. MOBILE STYLES (max-width: 768px)
-   ========================================= */
+/* Mobile */
 @media (max-width: 768px) {
   .about-section {
-    flex-direction: column; /* Stack items vertically */
-    
-    /* FIX: Use flex-start so content starts at top, not middle */
-    justify-content: flex-start; 
-    align-items: center;
-    
-    /* Add padding to top so Navbar doesn't cover text */
-    padding-top: 120px; 
+    flex-direction: column; /* Stack vertically ONLY on mobile */
+    justify-content: flex-start;
+    padding-top: 120px;
     padding-bottom: 50px;
-    
-    /* Remove min-height restriction so content flows naturally */
-    min-height: auto; 
+    min-height: auto;
     text-align: center;
     gap: 30px;
   }
 
   .about-text {
     width: 100%;
-    text-align: center; /* Center text for mobile look */
+    text-align: center;
   }
-
+  
   .about-text h1 {
     font-size: 2.2rem;
     text-align: center;
-    margin-bottom: 15px;
   }
-
+  
   .about-text p {
     text-align: center;
-    font-size: 1rem;
   }
-
-  /* Center the container holding the buttons */
-  .about-buttons {
-    justify-content: center;
-    flex-wrap: wrap; /* Allows buttons to stack if screen is very thin */
-  }
-
-  /* Center social icons */
-  .social-icons {
+  
+  .about-buttons, .social-icons {
     justify-content: center;
   }
 
