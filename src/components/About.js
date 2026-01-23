@@ -59,14 +59,14 @@ const About = () => {
           <p>
             I am passionate about building scalable and interactive web applications and creating
             impactful digital solutions that combine creativity with technology. With hands-on
-            experience in full-stack development, data engineering, and AI-driven projects, I
+            experience in full-stack development, data engineering and AI-driven projects, I
             actively contribute to real-world, client-based applications and production deployments.
           </p>
 
           <p>
             Beyond coding, I enjoy photography and videography, capturing moments and sharing my
-            journey through reels, blogs, and my YouTube channel. I believe in using technology not
-            only to solve problems, but also to tell stories, build communities, and create meaningful
+            journey through reels, blogs and my YouTube channel. I believe in using technology not
+            only to solve problems, but also to tell stories, build communities and create meaningful
             experiences.
           </p>
           
